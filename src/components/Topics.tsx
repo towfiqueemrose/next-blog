@@ -43,7 +43,6 @@ export default function Topics({ categories }: { categories: Category[] }) {
   return (
       <div className="component-bg-deep">
         <h1 className='h1'>Topics</h1>
-        <p className='p-lg'>Discover 233 topics</p>
 
         <div className="relative">
           <button 
