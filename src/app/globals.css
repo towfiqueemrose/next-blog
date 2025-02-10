@@ -1,21 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-exo2: 'Exo 2', sans-serif;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-exo2);
+}
+
+.h1 {
+  @apply text-3xl md:text-4xl my-2 font-bold text-logo;
+}
+.p-lg {
+  @apply text-xl my-2 font-medium text-gray-700 dark:text-white;
+}
+
+.p-sm {
+  @apply text-base my-2 font-medium text-gray-700 dark:text-white;
+}
+
+.h2 {
+  @apply text-xl md:text-2xl my-2 font-bold text-logo ;
+}
+
+.h3 {
+  @apply text-lg my-2 font-bold text-gray-700 dark:text-gray-300;
+}
+
+.h4 {
+  @apply text-sm text-gray-700 dark:text-gray-300
+}
+
+.card-new-auth {
+  @apply w-[225px] overflow-hidden flex flex-col items-center rounded-3xl hover:scale-95 transition-transform;
+}
+
+.card-allignment {
+  @apply flex mt-4 gap-6 justify-evenly flex-wrap;
+}
+
+.profile-image {
+  @apply rounded-full border-2 border-white overflow-hidden bg-white
+}
+
+.profile-image-position {
+ @apply absolute -bottom-12 left-1/2 -translate-x-1/2
+}
+
+.component-bg-deep {
+  @apply mt-10 bg-exLight dark:bg-exDark rounded-xl p-6
+}
+
+.topic-img {
+ @apply w-[230px] h-[165px] object-cover rounded-3xl
+}
+
+.create-author-btn {
+  @apply mt-6 inline-block bg-logo text-exDark text-xl font-bold dark:text-logo dark:bg-exDark rounded-full px-6 py-4
+}
+
+.create-author-main {
+@apply flex flex-wrap-reverse
+}
+
+.see-all {
+  @apply text-logo dark:text-white  mt-4 flex text-2xl font-semibold
+}
+
+.card-main {
+  @apply flex flex-col md:flex-row gap-6 bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow
+}
+
+.home-love {
+  @apply flex items-center space-x-1 text-gray-400
+}
+
+.article-card-main {
+  @apply max-w-lg bg-white dark:bg-exDark rounded-3xl overflow-hidden shadow-lg hover:scale-95 transition-transform
+}
+
+.home-card-left {
+  @apply w-full md:w-1/2 bg-white dark:bg-exDark dark:text-white border border-logo rounded-3xl overflow-hidden hover:scale-95 shadow-sm hover:shadow-md transition-transform
+}
+
+.home-card-right {
+  @apply bg-white text-white dark:bg-exDark border border-logo transition-transform rounded-3xl overflow-hidden shadow-sm hover:shadow-md flex hover:scale-95
+}
+
+.h1-big {
+  @apply text-5xl md:text-7xl lg:text-8xl font-bold text-white
+}
+
+.article-list {
+  @apply grid grid-cols-1 mt-6 md:grid-cols-2 lg:grid-cols-3 gap-5
+}
+
+.auther-profile-card {
+  @apply bg-white dark:bg-exDark rounded-full p-6 shadow-sm max-w-3xl mx-auto w-full  min-h-[175px] 
+}
+
+.nav-link {
+  @apply hover:text-logo dark:hover:text-white transition-colors duration-300
+}
+
+.Add-article-tile {
+  @apply block text-xl dark:text-white text-logo font-medium mb-2
+}
+
+.add-article-input {
+  @apply  w-full px-4 py-2 border border-logoLight rounded-md focus:ring-2 focus:ring-exLight focus:border-logo
+}
+
+.add-article-submit {
+  @apply w-full text-lg font-bold text-exDark py-2 px-4 rounded-md bg-logo focus:scale-95 disabled:bg-gray-400 disabled:cursor-not-allowed transition-transform
+}
+
+.article {
+  @apply text-xl my-2 font-medium text-exDark leading-relaxed dark:text-white ;
+}
+
+.author-card {
+ @apply w-[130px] h-[130px] overflow-hidden rounded-full border-2 border-logo
 }
